@@ -7,6 +7,8 @@ parser.tab.h
 # ---- Compiled binary ----
 minicompiler
 
+minicompiler.exe
+
 # ---- Compiler runtime output ----
 output.tac
 output.asm
