@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "parser.tab.h"
+
+/* Count lexical errors so main.c can report/abort like it does for
+   syntax and semantic errors. */
+int lexical_error_count = 0;
 %}
 
 %option noyywrap
@@ -63,7 +67,9 @@ ALNUM   [a-zA-Z0-9_]
 [ \t\r\n]+  { }
 
 .           {
-    printf("Lexical error: %s\n", yytext);
+    fprintf(stderr, "Lexical Error [line %d]: unexpected character '%s'\n",
+            yylineno, yytext);
+    lexical_error_count++;
 }
 
 %%

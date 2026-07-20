@@ -1,0 +1,25 @@
+# ---- Flex / Bison generated sources ----
+lex.yy.c
+parser.tab.c
+parser.tab.h
+*.output          # bison -v / -d verbose grammar report
+
+# ---- Compiled binary ----
+minicompiler
+
+# ---- Compiler runtime output ----
+output.tac
+output.asm
+
+# ---- Object files (in case of a different build setup) ----
+*.o
+*.obj
+
+# ---- Editor / OS junk ----
+*.swp
+*~
+.vscode/
+.DS_Store
+
+# ---- Core dumps (if the compiler crashes during testing) ----
+core
