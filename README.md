@@ -1,6 +1,6 @@
 # MiniCompiler
 
-MiniLang compiler project for CSE 712 Compiler Lab.
+MiniLang compiler project.
 
 Build:
 ```bash
